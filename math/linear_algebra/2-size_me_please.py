@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Contains the calculates that finds the shape of the matrix"""
+
 
 def matrix_shape(matrix):
     """Returns the shape of the matrix"""
