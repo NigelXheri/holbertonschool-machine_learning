@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
-"""Contains function def array(df): that takes a pd.DataFrame as input and performs the following:
+"""Contains function def array(df): 
+    that takes a pd.DataFrame as input and performs the following:
     - df is a pd.DataFrame containing columns named High and Close.
-    - The function should select the last 10 rows of the High and Close columns.
+    - The function should select the last 10 rows
+    of the High and Close columns.
     - Convert these selected values into a numpy.ndarray.
     - Returns: the numpy.ndarray
 """
 
 
 def array(df):
-    """Contains function def array(df): that takes a pd.DataFrame as input and performs the following:
+    """Contains function def array(df): 
+        that takes a pd.DataFrame as input and performs the following:
         - df is a pd.DataFrame containing columns named High and Close.
-        - The function should select the last 10 rows of the High and Close columns.
+        - The function should select the last 10 rows
+        of the High and Close columns.
         - Convert these selected values into a numpy.ndarray.
         - Returns: the numpy.ndarray
     """
