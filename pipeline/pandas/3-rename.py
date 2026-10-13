@@ -17,6 +17,6 @@ def rename(df):
         - Display only the Datetime and Close column
         - Returns: the modified pd.DataFrame
     """
-    df['Timestamp'] = pd.to_datetime(df['Timestamp'])
+    df['Timestamp'] = pd.to_datetime(df['Timestamp'], unit='s')
     df = df.rename(columns={"Timestamp": "Datetime"})
     return df[['Datetime', 'Close']]
