@@ -4,9 +4,7 @@
 
 def np_slice(matrix, axes={}):
     """Slice a matrix along specific axes"""
-
     slices = [slice(None)] * matrix.ndim
-    for axis, value in axes.items():
-        value = tuple(value) + (None,) * (3 - len(value))
-        slices[axis] = slice(*value)
+    for k, v in axes.items():
+        slices[k] = slice(*v)
     return matrix[tuple(slices)]
