@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+"""Plots the line graph"""
 import numpy as np
 import matplotlib.pyplot as plt
 
 
 def line():
+    """Plots the line graph"""
 
     y = np.arange(0, 11) ** 3
     x = np.arange(0, 11)
