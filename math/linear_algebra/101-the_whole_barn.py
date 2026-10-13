@@ -18,8 +18,8 @@ def add_recursive(mat1, mat2):
 
 def get_shape(mat):
     """Returns a list with the matrix's dimensions"""
-    temp_dimensions = []
-    while not isinstance(mat, int):
-        temp_dimensions.append(len(mat))
+    dimensions = []
+    while isinstance(mat, list):
+        dimensions.append(len(mat))
         mat = mat[0]
-    return len(temp_dimensions)
+    return dimensions
