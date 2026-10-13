@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
+"""Draws a changed scale graph"""
 import numpy as np
 import matplotlib.pyplot as plt
-"""Draws a changed scale graph"""
 
 
 def change_scale():
