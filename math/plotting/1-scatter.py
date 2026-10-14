@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# """Creates a scatter plot"""
+"""Creates a scatter plot"""
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -13,8 +13,8 @@ def scatter():
     y += 180
     plt.figure(figsize=(6.4, 4.8))
 
-    # your code here
-    plt.xlabel("Height (in)")
-    plt.ylabel("Weight (lbs)")
-    plt.title("Men's Height vs Weight")
     plt.scatter(x, y, color='magenta', s=10)
+    plt.xlabel('Height (in)')
+    plt.ylabel('Weight (lbs)')
+    plt.title("Men's Height vs Weight")
+    plt.show()
