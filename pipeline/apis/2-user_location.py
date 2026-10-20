@@ -11,7 +11,6 @@ if __name__ == "__main__":
     parser.add_argument('url')
     args = parser.parse_args()
     user = args.url
-    print(user)
 
     response = requests.get(user)
     status_code = response.status_code
