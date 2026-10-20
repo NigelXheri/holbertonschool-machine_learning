@@ -19,7 +19,8 @@ if __name__ == "__main__":
         print('Not found')
         exit(1)
     if status_code == 403:
-        print('Reset in {:.0f} min'.format((int(response.headers['x-ratelimit-reset'])
-                           - time.time())/60))
+        print('Reset in {:.0f} min'
+              .format((int(response.headers['x-ratelimit-reset'])
+                       - time.time())/60))
         exit(1)
     print(data['location'])
