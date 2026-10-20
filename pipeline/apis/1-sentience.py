@@ -9,10 +9,10 @@ def sentientPlanets():
         from SWAPI API"""
     base_url = 'https://swapi-api.hbtn.io/api/'
     url = base_url + 'species/'
+    sentient_planets = []
     while url:
         data = requests.get(url).json()
         species = data['results']
-        sentient_planets = []
         for specie in species:
             if (specie['classification'] == 'sentient'
                     or specie['designation'] == 'sentient'):
@@ -20,8 +20,6 @@ def sentientPlanets():
                 if homeworld_url is None:
                     continue
                 homeworld_data = requests.get(homeworld_url).json()
-                if homeworld_data['name'] in [None, 'unknown']:
-                    continue
                 sentient_planets.append(homeworld_data['name'])
 
         url = data['next']
