@@ -18,11 +18,9 @@ def sentientPlanets():
                     or specie['designation'] == 'sentient'):
                 homeworld_url = specie['homeworld']
                 if homeworld_url is None:
-                    print(f'Homeworld_url of {specie['name']} not found')
                     continue
                 homeworld_data = requests.get(homeworld_url).json()
                 if homeworld_data['name'] in [None, 'unknown']:
-                    print(f'Homeworld name of {specie['name']} not found')
                     continue
                 sentient_planets.append(homeworld_data['name'])
 
