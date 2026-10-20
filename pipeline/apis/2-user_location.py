@@ -5,6 +5,8 @@ import requests
 import time
 
 if __name__ == "__main__":
+    """Prints the location of a specific user from SWAPI API"""
+
     parser = argparse.ArgumentParser(prog="user_location.py")
     parser.add_argument('url')
     args = parser.parse_args()
