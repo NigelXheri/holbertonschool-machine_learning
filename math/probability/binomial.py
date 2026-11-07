@@ -38,3 +38,14 @@ class Binomial:
             combinations = combinations * (self.n - i + 1) // i
 
         return combinations * self.p ** k * (1 - self.p) ** (self.n - k)
+
+    def cdf(self, k):
+        """Return the probability of at most k successes for valid counts."""
+        k = int(k)
+        if not 0 <= k <= self.n:
+            return 0
+
+        probability = 0.0
+        for count in range(k + 1):
+            probability += self.pmf(count)
+        return probability
