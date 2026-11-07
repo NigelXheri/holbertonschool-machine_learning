@@ -30,3 +30,14 @@ class Poisson:
 
         e = 2.7182818285
         return e ** (-self.lambtha) * self.lambtha ** k / factorial
+
+    def cdf(self, k):
+        """Return the probability of at most k occurrences."""
+        k = int(k)
+        if k < 0:
+            return 0
+
+        probability = 0.0
+        for count in range(k + 1):
+            probability += self.pmf(count)
+        return probability
