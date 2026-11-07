@@ -26,3 +26,15 @@ class Binomial:
             p = 1 - variance / mean
             self.n = round(mean / p)
             self.p = mean / self.n
+
+    def pmf(self, k):
+        """Return the probability of exactly k successes."""
+        k = int(k)
+        if not 0 <= k <= self.n:
+            return 0
+
+        combinations = 1
+        for i in range(1, min(k, self.n - k) + 1):
+            combinations = combinations * (self.n - i + 1) // i
+
+        return combinations * self.p ** k * (1 - self.p) ** (self.n - k)
